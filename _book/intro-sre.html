@@ -1,0 +1,1198 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.5">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>6&nbsp; Sentence Reading Efficiency (ROAR-Sentence) – Rapid Online Assessment of Reading (ROAR)</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./intro-phoneme.html" rel="next">
+<link href="./intro-swr.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar docked">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./intro.html">Introduction</a></li><li class="breadcrumb-item"><a href="./intro-sre.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Sentence Reading Efficiency (ROAR-Sentence)</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Rapid Online Assessment of Reading (ROAR)</a> 
+        <div class="sidebar-tools-main tools-wide">
+    <a href="https://github.com/YeatmanLab/ROAR-Technical-Manual" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+    <a href="./Rapid-Online-Assessment-of-Reading--ROAR-.pdf" title="Download PDF" class="quarto-navigation-tool px-1" aria-label="Download PDF"><i class="bi bi-file-pdf"></i></a>
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">A bridge between the lab and the classroom</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Introduction</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./intro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">ROAR Vision and Mission</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./intro-foundational-reading-skills.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">ROAR Assessment Suites</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./intro-norms.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">ROAR Norming Sample</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./intro-irt-cat.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Computer Adaptive Testing (CAT)</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./intro-swr.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Single Word Reading (ROAR-Word)</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./intro-sre.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Sentence Reading Efficiency (ROAR-Sentence)</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./intro-phoneme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Phonological Awareness (ROAR-Phoneme)</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./intro-letter.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Letter Sound Knowledge (ROAR-Letter)</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./intro-dyslexia-screening-subtyping.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">ROAR Dyslexia Screening and Subtyping</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Introduction to ROAR-Español</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./intro-multilingualism.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Multilingualism</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./intro-palabra.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Spanish Single Word Reading (ROAR-Palabra)</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./intro-frase.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Eficiencia de lectura de frases (ROAR-Frase)</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./intro-fonema.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Conciencia fonológica (ROAR-Fonema)</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./intro-letra.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Conocimiento de Sonidos de Letras (ROAR-Letra)</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Reliability</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./reliability-swr.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Reliability of ROAR-Word</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./reliability-sre.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Reliability of ROAR-Sentence</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./reliability-pa.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Reliability of ROAR-Phoneme</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./reliability-letter.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Reliability of ROAR-Letter</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./reliability-dyslexia.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Reliability of Dyslexia Prediction and Subtyping</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">Reliability of ROAR-Español</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./reliability-palabra.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Reliability of ROAR-Palabra</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./reliability-frase.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Reliability of ROAR-Frase</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
+ <span class="menu-text">Construct Validity: Evidence that ROAR subtests reliably measure the intended constructs</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./concurrent-validity-pa.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Phonological Awareness (ROAR-Phoneme) Concurrent Validity</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./concurrent-validity-swr.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Single Word Recognition (ROAR-Word) Concurrent Validity</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./concurrent-validity-sre.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Sentence Reading Efficiency (ROAR-Sentence) Concurrent Validity</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true">
+ <span class="menu-text">Congstruct Validity: ROAR-Español</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./concurrent-validity-palabra.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">Spanish Single Word Recognition (ROAR-Palabra) Concurrent Validity</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./concurrent-validity-frase.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">ROAR-Frase Concurrent Validity</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true">
+ <span class="menu-text">Criterion Validity: Evidence for ROAR as a dyslexia screener</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./validity-dyslexia-screening.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">Validity: Dyslexia Screening and Sub-typing</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="true">
+ <span class="menu-text">Predictive Validity: Longitudinal evidence that ROAR predicts future reading scores and dyslexia risk</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./predictive-validity.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">28</span>&nbsp; <span class="chapter-title">Predictive Validity</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./predictions-RVP.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">29</span>&nbsp; <span class="chapter-title">Predictive validity of ROAR-RVP</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="5">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#defining-the-construct-of-sentence-reading-efficiency" id="toc-defining-the-construct-of-sentence-reading-efficiency" class="nav-link active" data-scroll-target="#defining-the-construct-of-sentence-reading-efficiency"><span class="header-section-number">6.1</span> Defining the construct of Sentence Reading Efficiency</a></li>
+  <li><a href="#other-measures-of-oral-and-silent-reading-efficiency-and-fluency" id="toc-other-measures-of-oral-and-silent-reading-efficiency-and-fluency" class="nav-link" data-scroll-target="#other-measures-of-oral-and-silent-reading-efficiency-and-fluency"><span class="header-section-number">6.2</span> Other measures of oral and silent reading efficiency and fluency</a></li>
+  <li><a href="#structure-of-the-task-and-design-of-the-items" id="toc-structure-of-the-task-and-design-of-the-items" class="nav-link" data-scroll-target="#structure-of-the-task-and-design-of-the-items"><span class="header-section-number">6.3</span> Structure of the task and design of the items</a></li>
+  <li><a href="#sec-sre-scoring" id="toc-sec-sre-scoring" class="nav-link" data-scroll-target="#sec-sre-scoring"><span class="header-section-number">6.4</span> Scoring</a></li>
+  <li><a href="#bibliography" id="toc-bibliography" class="nav-link" data-scroll-target="#bibliography">References</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/YeatmanLab/ROAR-Technical-Manual/blob/main/intro-sre.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li><li><a href="https://github.com/YeatmanLab/ROAR-Technical-Manual/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./intro.html">Introduction</a></li><li class="breadcrumb-item"><a href="./intro-sre.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Sentence Reading Efficiency (ROAR-Sentence)</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span id="sec-intro-sre" class="quarto-section-identifier"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Sentence Reading Efficiency (ROAR-Sentence)</span></span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>ROAR-Sentence measures the speed or efficiency with which participants can read sentences for understanding. Being able to efficiently read connected text for understanding is at the foundation of reading development and is a major bottle-neck for children with dyslexia. ROAR-Sentence is specifically designed to tap into reading efficiency and sentences are syntactically and semantically simple, avoid low frequency words and complex sentence structures, and have unambiguous answers that require little, if any, background knowledge.</p>
+<p>As reading skills develop, the speed with which children can read connected text becomes particularly important <span class="citation" data-cites="Silverman2013-mh">(<a href="references.html#ref-Silverman2013-mh" role="doc-biblioref">Silverman et al. 2013</a>)</span>. “Efficient word recognition” was highlighted in the original conceptualization of the “simple view of reading” <span class="citation" data-cites="Hoover1990-hm">(<a href="references.html#ref-Hoover1990-hm" role="doc-biblioref">Hoover and Gough 1990</a>)</span>, and fluent reading has been implicated as a bridge between decoding skills and reading comprehension <span class="citation" data-cites="Pikulski2005-oy Silverman2013-mh">(<a href="references.html#ref-Pikulski2005-oy" role="doc-biblioref">Pikulski and Chard 2005</a>; <a href="references.html#ref-Silverman2013-mh" role="doc-biblioref">Silverman et al. 2013</a>)</span>. Children with dyslexia and other word reading difficulties often struggle to achieve fluency, and struggles with word reading speed and fluency have always been core to the definition of dyslexia <span class="citation" data-cites="Catts2024-os Lyon2003-an">(<a href="references.html#ref-Catts2024-os" role="doc-biblioref">Catts et al. 2024</a>; <a href="references.html#ref-Lyon2003-an" role="doc-biblioref">Lyon, Shaywitz, and Shaywitz 2003</a>)</span>. <span class="citation" data-cites="Tran2023-ib">Tran et al. (<a href="references.html#ref-Tran2023-ib" role="doc-biblioref">2023</a>)</span> provide a detailed description of the development of a silent sentence reading efficiency (SRE) measure that was designed to be fast, reliable, efficient at scale, and targeted to the issues with speed/fluency that present a bottleneck for so many struggling readers. We provide key details here in the technical manual (using much of the same text) and refer readers to the peer-reviewed publication for more details of the research and development process <span class="citation" data-cites="Tran2023-ib">(<a href="references.html#ref-Tran2023-ib" role="doc-biblioref">Tran et al. 2023</a>)</span>.</p>
+<section id="defining-the-construct-of-sentence-reading-efficiency" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="defining-the-construct-of-sentence-reading-efficiency"><span class="header-section-number">6.1</span> Defining the construct of Sentence Reading Efficiency</h2>
+<p>Timed reading measures go under a variety of names (e.g., reading fluency, reading efficiency, etc) and involve different levels of demands on comprehension and articulation, making it hard to interpret the extent to which scores reflect differences in reading efficiency versus separate constructs. We designed ROAR-Sentence to isolate reading efficiency by minimizing comprehension demands while maintaining checks for understanding, and we used a silent reading task to a) avoid the confounds of articulation that are inherent to oral reading tasks and b), measure the most ecologicaly valid form of reading (silent reading). This stands in contrast to other silent reading measures that confound articulation, comprehension and efficiency leading to a less interpretable score.</p>
+</section>
+<section id="other-measures-of-oral-and-silent-reading-efficiency-and-fluency" class="level2" data-number="6.2">
+<h2 data-number="6.2" class="anchored" data-anchor-id="other-measures-of-oral-and-silent-reading-efficiency-and-fluency"><span class="header-section-number">6.2</span> Other measures of oral and silent reading efficiency and fluency</h2>
+<p>Traditional measures that are most similar to ROAR-SRE are sometimes referred to as sentence reading fluency tasks, and while they are not administered online, they do elicit silent responses from students. For example, the Woodcock Johnson (WJ) Tests of Achievement “Sentence Reading Fluency” subtest <span class="citation" data-cites="Schrank2014-iu">(<a href="references.html#ref-Schrank2014-iu" role="doc-biblioref">Schrank et al. 2014</a>)</span>, and Test Of Silent Reading Efficiency and Comprehension (TOSREC) <span class="citation" data-cites="Wagner_R_K_Torgesen_J_K_Rashotte_C_A_Pearson_N_A2010-yw">(<a href="references.html#ref-Wagner_R_K_Torgesen_J_K_Rashotte_C_A_Pearson_N_A2010-yw" role="doc-biblioref">Wagner, R. K., Torgesen, J. K., Rashotte, C. A., &amp; Pearson, N. A. 2010</a>)</span>, rely on an established design: A student reads a set of sentences and endorses whether each sentence is true or false. For example, the sentence, Fire is hot, would be endorsed as True. A student endorses as many sentences as they can within a fixed time limit (usually three minutes). The final score is the total number of correctly endorsed sentences minus the total number of incorrectly endorsed sentences. Both the WJ and TOSREC are standardized to be administered in a one-on-one setting (though TOSREC can also be group administered) and the stimuli consist of printed lists of sentences which students read silently and mark True/False with a pencil. Even though the criteria for item development on these assessments is not specified in detail, there is a growing literature showing the utility of this general approach. First of all, this quick, 3 minute assessment is straightforward to administer and score and has exceptional reliability, generally between 0.85 and 0.90 for alternate form reliability <span class="citation" data-cites="Wagner_R_K_Torgesen_J_K_Rashotte_C_A_Pearson_N_A2010-yw Johnson2011-vf Wagner2011-tk">(<a href="references.html#ref-Wagner_R_K_Torgesen_J_K_Rashotte_C_A_Pearson_N_A2010-yw" role="doc-biblioref">Wagner, R. K., Torgesen, J. K., Rashotte, C. A., &amp; Pearson, N. A. 2010</a>; <a href="references.html#ref-Johnson2011-vf" role="doc-biblioref">Johnson, Pool, and Carter 2011</a>; <a href="references.html#ref-Wagner2011-tk" role="doc-biblioref">Wagner 2011</a>)</span>. Moreover, this measure has been shown to be useful for predicting performance on state reading assessments: For example, Johnson and colleagues demonstrated that TOSREC scores could accurately predict students who did not achieve grade-level performance benchmarks on end-of-the-year state testing of reading proficiency <span class="citation" data-cites="Johnson2011-vf">(@ <a href="references.html#ref-Johnson2011-vf" role="doc-biblioref">Johnson, Pool, and Carter 2011</a>)</span>.</p>
+<p>Further evidence for validity comes from the strong correspondence between silent sentence reading measures such as the TOSREC and Oral Reading Fluency (ORF) measures <span class="citation" data-cites="Denton2011-ac Wagner2011-tk Johnson2011-vf Kang2019-sq Kim2012-qa Kim2014-fu Price2016-uq">(<a href="references.html#ref-Denton2011-ac" role="doc-biblioref">Denton et al. 2011</a>; <a href="references.html#ref-Wagner2011-tk" role="doc-biblioref">Wagner 2011</a>; <a href="references.html#ref-Johnson2011-vf" role="doc-biblioref">Johnson, Pool, and Carter 2011</a>; <a href="references.html#ref-Kang2019-sq" role="doc-biblioref">Kang and Shin 2019</a>; <a href="references.html#ref-Kim2012-qa" role="doc-biblioref">Y.-S. Kim, Wagner, and Lopez 2012</a>; <a href="references.html#ref-Kim2014-fu" role="doc-biblioref">Y.-S. G. Kim, Park, and Wagner 2014</a>; <a href="references.html#ref-Price2016-uq" role="doc-biblioref">Price et al. 2016</a>)</span>. ORF is one of the most widely used measures of reading development in research and practice, and some have even argued for ORF as an indicator of overall reading competence <span class="citation" data-cites="Fuchs2001-jd">(<a href="references.html#ref-Fuchs2001-jd" role="doc-biblioref">Fuchs et al. 2001</a>)</span>. ORF is widely used to chart reading progress in the classroom, providing scores with units of words per minute that can be examined longitudinally (e.g., for progress monitoring (Cummings et al., 2013; Good et al., 2002; Hoffman et al., 2009)), compared across classrooms and districts, and can inform policy decisions such as how to confront learning loss from the Covid-19 pandemic (Domingue et al., 2021, 2022). Even though silent reading and ORF are highly correlated, the measures also have unique variance (Hudson et al., 2008; Y.-S. Kim et al., 2012; Wagner, 2011) and, theoretically, have different strengths and weaknesses. For example, even though there are strong empirical connections between ORF and reading comprehension (Y.-S. G. Kim et al., 2014), ORF does not require any understanding of the text and has been labeled by some as “barking at print” (Samuels, 2007). Silent reading, on the other hand, is the most common form of reading, particularly as children advance in reading instruction. In line with this theoretical perspective, Kim and colleagues found that silent sentence reading fluency was a better predictor of reading comprehension than ORF starting in second grade (Y.-S. Kim et al., 2012). Thus, given the practical benefits of silent reading measures (easy to administer and score at scale), along with the strong empirical evidence of reliability, concurrent, and predictive validity, and face validity of the measure, an online measure of silent sentence reading efficiency would be useful for both research and practice.</p>
+</section>
+<section id="structure-of-the-task-and-design-of-the-items" class="level2" data-number="6.3">
+<h2 data-number="6.3" class="anchored" data-anchor-id="structure-of-the-task-and-design-of-the-items"><span class="header-section-number">6.3</span> Structure of the task and design of the items</h2>
+<p>ROAR-Sentence uses a similar task design as the Test of Silent Reading Efficiency and Comprehension (TOSREC) and WJ Sentence Reading Fluency sub-test with the major differences being: a) ROAR-Sentence is a gamified online task rather than pencil and paper and b) the ROAR-Sentence items are designed specifically to tap into silent sentence reading efficiency. <a href="#fig-ROAR-Sentence-Task" class="quarto-xref">Figure&nbsp;<span>6.1</span></a> shows the ROAR-Sentence task.</p>
+<div id="fig-ROAR-Sentence-Task" class="lightbox quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="ROAR-Sentence task">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-ROAR-Sentence-Task-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="figures/ROAR-Sentence-Task.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figure&nbsp;6.1: ROAR-Sentence task. In the ROAR-Sentence task, participants first choose the character they want to read with and then they are instructed to read the sentences as quickly as possible and indicate with a button-press whether each sentence is true or false. Their score is computed as the number of correct responses minus the number of incorrect responses in either 180 second or 90 seconds depending on the version of the task"><img src="figures/ROAR-Sentence-Task.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%" alt="ROAR-Sentence task"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-ROAR-Sentence-Task-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6.1: ROAR-Sentence task. In the ROAR-Sentence task, participants first choose the character they want to read with and then they are instructed to read the sentences as quickly as possible and indicate with a button-press whether each sentence is true or false. Their score is computed as the number of correct responses minus the number of incorrect responses in either 180 second or 90 seconds depending on the version of the task
+</figcaption>
+</figure>
+</div>
+<p>The strength of silent reading fluency/efficiency tasks is also their weakness: On the one hand, these tasks include comprehension, which bolsters the argument for the face validity of silent reading measures. On the other hand, what is meant by comprehension in these sentence reading tasks is often ill-defined and, thus, a low score lacks clarity on whether the student is struggling due to difficulties with “comprehension” or “efficiency”. As a concrete example, sentences in the TOSREC incorporate low frequency vocabulary words (e.g., porpoise, bagpipes, locomotive, greyhounds, buzzards) meaning that vocabulary knowledge as well as specific content knowledge (e.g., knowledge about porpoises, bagpipes and locomotives) will affect scores. While this design decision might be a strength in some scenarios (e.g., generalizability to more complex reading measures such as state testing), it presents a challenge for interpretability. An interpretable construct is critical if scores are used to individualize instruction. For example, does a fourth grade student with a low TOSREC score need targeted instruction and practice focused on a) building greater automaticity and efficiency in reading or b) vocabulary, syntax and background knowledge. Our goal in designing a new silent sentence reading efficiency measure was to more directly target reading efficiency by designing simple sentences that are unambiguously true or false and have minimal requirements in terms of vocabulary, syntax and background knowledge. Ideally, this measure could be used to track reading rate in units of words per minute, akin to a silent reading version of the ORF task, but with a check to ensure reading for understanding.</p>
+<p>To consider the ideal characteristics of these sentences, it may be helpful to begin by considering the ORF task which is used to compute an oral reading rate (words per minute) for connected text. In an ORF task, the test administrator can simply count the number of words read correctly to assess each student’s reading rate. Translating this task to a silent task that can be administered at scale online poses an issue because an administrator is unable to monitor the number of sentences read by the student. A student could be instructed to press a button on the keyboard after the completion of a sentence in order to proceed to the next one. However, the validity of this method depends on the student’s ability to exhibit restraint and wait until the completion of each sentence before proceeding to the next sentence.</p>
+<p>In the interest of preserving the validity of the interpretations of the scores, we retain the True/False endorsement of the TOSREC and WJ, but reframe its use. That is, for the ROAR-Sentence task, the endorsement of True/False should be interpreted as an indication that the student has read the sentence, rather than as an evaluation of comprehension per se. In this context, if the student has difficulty comprehending a sentence, or if the student takes a long time to consider the correct answer because the sentence is confusing, syntactically complex, or depends on background knowledge and high-level reasoning, we lose confidence in the inferences that we can make about a student’s reading efficiency. As such, it is important that sentences designed for this task are simple assertions that are unambiguously true or false. However, creating sentences to adhere to these basic standards may not always be straightforward. For example, the statement “the sky is blue” may be true for a student in the high-plain desert in Colorado but may be a controversial statement for a student in Seattle. Thus, careful consideration must be given to crafting sentences that do not depend on specific background knowledge and are aligned with the goal of measuring reading efficiency. <span class="citation" data-cites="Tran2023-ib">(<a href="references.html#ref-Tran2023-ib" role="doc-biblioref">Tran et al. 2023</a>)</span> provides a detailed description of the iterative research and design process that went into defining and validating this construct and the reader is referred to that publication for more details on the item bank.</p>
+</section>
+<section id="sec-sre-scoring" class="level2" data-number="6.4">
+<h2 data-number="6.4" class="anchored" data-anchor-id="sec-sre-scoring"><span class="header-section-number">6.4</span> Scoring</h2>
+<p>ROAR-Sentence is a two alternative forced choice (2AFC) task and is scored as the total number of correct responses minus the total number of incorrect responses in the alloted (3 minute) time window. This scoring method controls for guessing by controlling for the number of incorrect responses in the calculation of the scores.</p>
+<p><strong>Types of Scores</strong></p>
+<ul>
+<li><strong>Raw Scores:</strong> The student’s <em>raw score</em> will range between 0-130.</li>
+<li><strong>Percentile Scores:</strong> Percentile scores are computed in 2 ways (see <a href="intro-norms.html" class="quarto-xref"><span>Chapter 3</span></a>):
+<ol type="1">
+<li>Based on ROAR Norms</li>
+<li>Based on linking ROAR scores to Test of Silent Reading Efficiency and Comprehension (TOSREC) and Woodcock Johnson Sentence Reading Fluency Standard Scores. This linking allows ROAR-Sentence scores to be interpreted with direct reference to the criterion measure that is often used to define dyslexia risk.</li>
+</ol></li>
+<li><strong>Standard Scores:</strong> Age standardized scores for ROAR-Sentence put scores for each age bin on a standard scale (normal distribution, <span class="math inline">\(\mu=100\)</span>, <span class="math inline">\(\sigma=15\)</span>) and are computed in 2 ways:
+<ol type="1">
+<li>Based on ROAR Norms</li>
+<li>Based on linking ROAR scores to TOSREC and WJ Standard Scores.</li>
+</ol></li>
+</ul>
+
+
+</section>
+<section id="bibliography" class="level1 unnumbered">
+<h1 class="unnumbered">References</h1>
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-Catts2024-os" class="csl-entry" role="listitem">
+Catts, Hugh W, Nicole Patton Terry, Christopher J Lonigan, Donald L Compton, Richard K Wagner, Laura M Steacy, Kelly Farquharson, and Yaacov Petscher. 2024. <span>“Revisiting the Definition of Dyslexia.”</span> <em>Ann. Dyslexia</em>, January.
+</div>
+<div id="ref-Denton2011-ac" class="csl-entry" role="listitem">
+Denton, Carolyn A, Amy E Barth, Jack M Fletcher, Jade Wexler, Sharon Vaughn, Paul T Cirino, Melissa Romain, and David J Francis. 2011. <span>“The Relations Among Oral and Silent Reading Fluency and Comprehension in Middle School: Implications for Identification and Instruction of Students with Reading Difficulties.”</span> <em>Sci. Stud. Read.</em> 15 (2): 109–35.
+</div>
+<div id="ref-Fuchs2001-jd" class="csl-entry" role="listitem">
+Fuchs, Lynn S, Douglas Fuchs, Michelle K Hosp, and Joseph R Jenkins. 2001. <span>“Oral Reading Fluency as an Indicator of Reading Competence: A Theoretical, Empirical, and Historical Analysis.”</span> <em>Sci. Stud. Read.</em> 5 (3): 239–56.
+</div>
+<div id="ref-Hoover1990-hm" class="csl-entry" role="listitem">
+Hoover, Wesley A, and Philip B Gough. 1990. <span>“The Simple View of Reading.”</span> <em>Read. Writ.</em> 2 (2): 127–60.
+</div>
+<div id="ref-Johnson2011-vf" class="csl-entry" role="listitem">
+Johnson, Evelyn S, Juli L Pool, and Deborah R Carter. 2011. <span>“Validity Evidence for the Test of Silent Reading Efficiency and Comprehension (<span>TOSREC</span>).”</span> <em>Assess. Eff. Interv.</em> 37 (1): 50–57.
+</div>
+<div id="ref-Kang2019-sq" class="csl-entry" role="listitem">
+Kang, Eun Young, and Mikyung Shin. 2019. <span>“The Contributions of Reading Fluency and Decoding to Reading Comprehension for Struggling Readers in Fourth Grade.”</span> <em>Read. Writ. Q.</em> 35 (3): 179–92.
+</div>
+<div id="ref-Kim2014-fu" class="csl-entry" role="listitem">
+Kim, Young-Suk Grace, Chea Hyeong Park, and Richard K Wagner. 2014. <span>“Is Oral/Text Reading Fluency a <span>‘Bridge’</span> to Reading Comprehension?”</span> <em>Read. Writ.</em> 27 (1): 79–99.
+</div>
+<div id="ref-Kim2012-qa" class="csl-entry" role="listitem">
+Kim, Young-Suk, Richard K Wagner, and Danielle Lopez. 2012. <span>“Developmental Relations Between Reading Fluency and Reading Comprehension: A Longitudinal Study from Grade 1 to Grade 2.”</span> <em>J. Exp. Child Psychol.</em> 113 (1): 93–111.
+</div>
+<div id="ref-Lyon2003-an" class="csl-entry" role="listitem">
+Lyon, G Reid, Sally E Shaywitz, and Bennett A Shaywitz. 2003. <span>“A Definition of Dyslexia.”</span> <em>Ann. Dyslexia</em> 53 (1): 1–14.
+</div>
+<div id="ref-Pikulski2005-oy" class="csl-entry" role="listitem">
+Pikulski, J J, and D J Chard. 2005. <span>“Fluency: Bridge Between Decoding and Reading Comprehension.”</span> <em>Read. Teach.</em>
+</div>
+<div id="ref-Price2016-uq" class="csl-entry" role="listitem">
+Price, Katherine W, Elizabeth B Meisinger, Max M Louwerse, and Sidney D’Mello. 2016. <span>“The Contributions of Oral and Silent Reading Fluency to Reading Comprehension.”</span> <em>Read. Psychol.</em> 37 (2): 167–201.
+</div>
+<div id="ref-Schrank2014-iu" class="csl-entry" role="listitem">
+Schrank, F A, K S McGrew, N Mather, B J Wendling, and E M LaForte. 2014. <span>“<span class="nocase">Woodcock-Johnson IV Tests of Achievement</span>.”</span> Riverside Publishing Company.
+</div>
+<div id="ref-Silverman2013-mh" class="csl-entry" role="listitem">
+Silverman, Rebecca D, Deborah L Speece, Jeffrey R Harring, and Kristen D Ritchey. 2013. <span>“Fluency Has a Role in the Simple View of Reading.”</span> <em>Sci. Stud. Read.</em> 17 (2): 108–33.
+</div>
+<div id="ref-Tran2023-ib" class="csl-entry" role="listitem">
+Tran, Jasmine E, Jason D Yeatman, Amy Burkhardt, Wanjing A Ma, Jamie Mitchell, Maya Yablonski, Liesbeth Gijbels, Carrie Townley-Flores, and Adam Richie-Halford. 2023. <span>“Development and Validation of a Rapid Online Sentence Reading Efficiency Assessment.”</span>
+</div>
+<div id="ref-Wagner_R_K_Torgesen_J_K_Rashotte_C_A_Pearson_N_A2010-yw" class="csl-entry" role="listitem">
+Wagner, R. K., Torgesen, J. K., Rashotte, C. A., &amp; Pearson, N. A. 2010. <em>Test of Silent Reading Efficiency and Comprehension</em>. Pro Ed.
+</div>
+<div id="ref-Wagner2011-tk" class="csl-entry" role="listitem">
+Wagner, Richard K. 2011. <span>“Relations Among Oral Reading Fluency, Silent Reading Fluency, and Reading Comprehension: A Latent Variable Study of First-Grade Readers.”</span> <em>Sci. Stud. Read.</em> 15 (4): 338–62.
+</div>
+</div>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./intro-swr.html" class="pagination-link" aria-label="Single Word Reading (ROAR-Word)">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Single Word Reading (ROAR-Word)</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./intro-phoneme.html" class="pagination-link" aria-label="Phonological Awareness (ROAR-Phoneme)">
+        <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Phonological Awareness (ROAR-Phoneme)</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/YeatmanLab/ROAR-Technical-Manual/blob/main/intro-sre.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li><li><a href="https://github.com/YeatmanLab/ROAR-Technical-Manual/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer><script>var lightboxQuarto = GLightbox({"openEffect":"zoom","selector":".lightbox","loop":false,"closeEffect":"zoom","descPosition":"bottom"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
+
+
+
+
+</body></html>
