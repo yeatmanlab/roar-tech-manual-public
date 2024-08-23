@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -131,7 +151,7 @@ window.Quarto = {
     <div class="sidebar-title mb-0 py-0">
       <a href="./">Rapid Online Assessment of Reading (ROAR)</a> 
         <div class="sidebar-tools-main tools-wide">
-    <a href="https://github.com/YeatmanLab/ROAR-Technical-Manual" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+    <a href="https://github.com/yeatmanlab/roar-technical-manual" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
     <a href="./Rapid-Online-Assessment-of-Reading--ROAR-.pdf" title="Download PDF" class="quarto-navigation-tool px-1" aria-label="Download PDF"><i class="bi bi-file-pdf"></i></a>
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
@@ -174,7 +194,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./intro-norms.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">ROAR Norming Sample</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">ROAR Scores and Norms</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -331,20 +351,20 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./concurrent-validity-pa.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Phonological Awareness (ROAR-Phoneme) Concurrent Validity</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="./concurrent-validity-swr.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Single Word Recognition (ROAR-Word) Concurrent Validity</span></span></a>
+ <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Single Word Recognition (ROAR-Word) Concurrent Validity</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./concurrent-validity-sre.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Sentence Reading Efficiency (ROAR-Sentence) Concurrent Validity</span></span></a>
+ <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Sentence Reading Efficiency (ROAR-Sentence) Concurrent Validity</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./concurrent-validity-pa.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Phonological Awareness (ROAR-Phoneme) Concurrent Validity</span></span></a>
   </div>
 </li>
       </ul>
@@ -352,7 +372,7 @@ window.Quarto = {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true">
- <span class="menu-text">Congstruct Validity: ROAR-Español</span></a>
+ <span class="menu-text">Construct Validity: ROAR-Español</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -392,7 +412,7 @@ window.Quarto = {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="true">
- <span class="menu-text">Predictive Validity: Longitudinal evidence that ROAR predicts future reading scores and dyslexia risk</span></a>
+ <span class="menu-text">Predictive Validity: Longitudinal evidence that ROAR predicts future reading development and dyslexia risk</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -428,10 +448,12 @@ window.Quarto = {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#criteria-for-identifying-disengaged-participants-and-flagging-unreliable-scores" id="toc-criteria-for-identifying-disengaged-participants-and-flagging-unreliable-scores" class="nav-link active" data-scroll-target="#criteria-for-identifying-disengaged-participants-and-flagging-unreliable-scores"><span class="header-section-number">20.1</span> Criteria for identifying disengaged participants and flagging unreliable scores</a></li>
-  <li><a href="#reliability-of-fixed-length-roar-palabra" id="toc-reliability-of-fixed-length-roar-palabra" class="nav-link" data-scroll-target="#reliability-of-fixed-length-roar-palabra"><span class="header-section-number">20.2</span> Reliability of fixed-length ROAR-Palabra</a></li>
+  <li><a href="#background-published-studies" id="toc-background-published-studies" class="nav-link active" data-scroll-target="#background-published-studies"><span class="header-section-number">20.1</span> Background: Published studies</a></li>
+  <li><a href="#criteria-for-identifying-disengaged-participants-and-flagging-unreliable-scores" id="toc-criteria-for-identifying-disengaged-participants-and-flagging-unreliable-scores" class="nav-link" data-scroll-target="#criteria-for-identifying-disengaged-participants-and-flagging-unreliable-scores"><span class="header-section-number">20.2</span> Criteria for identifying disengaged participants and flagging unreliable scores</a></li>
+  <li><a href="#reliability-of-fixed-length-roar-palabra" id="toc-reliability-of-fixed-length-roar-palabra" class="nav-link" data-scroll-target="#reliability-of-fixed-length-roar-palabra"><span class="header-section-number">20.3</span> Reliability of fixed-length ROAR-Palabra</a></li>
+  <li><a href="#bibliography" id="toc-bibliography" class="nav-link" data-scroll-target="#bibliography">References</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/YeatmanLab/ROAR-Technical-Manual/blob/main/reliability-palabra.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li><li><a href="https://github.com/YeatmanLab/ROAR-Technical-Manual/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/yeatmanlab/roar-technical-manual/blob/main/reliability-palabra.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li><li><a href="https://github.com/yeatmanlab/roar-technical-manual/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -455,10 +477,12 @@ window.Quarto = {
 </header>
 
 
-<!-- ## Background: Published studies -->
-<!-- None yet. Perhaps preprint soon... -->
-<section id="criteria-for-identifying-disengaged-participants-and-flagging-unreliable-scores" class="level2" data-number="20.1">
-<h2 data-number="20.1" class="anchored" data-anchor-id="criteria-for-identifying-disengaged-participants-and-flagging-unreliable-scores"><span class="header-section-number">20.1</span> Criteria for identifying disengaged participants and flagging unreliable scores</h2>
+<section id="background-published-studies" class="level2" data-number="20.1">
+<h2 data-number="20.1" class="anchored" data-anchor-id="background-published-studies"><span class="header-section-number">20.1</span> Background: Published studies</h2>
+<p><span class="citation" data-cites="bhat2024-pa">Bhat et al. (<a href="references.html#ref-bhat2024-pa" role="doc-biblioref">2024</a>)</span> reported a large study (N=1,337) examining the relationship between reading skills, math skills, and phonological awareness in Spanish speaking students in Colombia. In this sample, the reported marginal reliability of ROAR-Palabra was 0.92, reliability of ROAR-Frase was 0.82, and ROAR-Fonema was 0.85.</p>
+</section>
+<section id="criteria-for-identifying-disengaged-participants-and-flagging-unreliable-scores" class="level2" data-number="20.2">
+<h2 data-number="20.2" class="anchored" data-anchor-id="criteria-for-identifying-disengaged-participants-and-flagging-unreliable-scores"><span class="header-section-number">20.2</span> Criteria for identifying disengaged participants and flagging unreliable scores</h2>
 <p>To account for unreliable scores and disengaged participation (as discussed in <a href="reliability-swr.html" class="quarto-xref"><span>Chapter 15</span></a> and shown in <a href="intro-palabra.html" class="quarto-xref"><span>Chapter 11</span></a>), participants with a median response time &lt;450ms are flagged in ROAR-Score reports and their data is excluded from analyses.</p>
 <div class="cell">
 <div class="cell-output-display">
@@ -470,8 +494,8 @@ window.Quarto = {
 </div>
 </div>
 </section>
-<section id="reliability-of-fixed-length-roar-palabra" class="level2" data-number="20.2">
-<h2 data-number="20.2" class="anchored" data-anchor-id="reliability-of-fixed-length-roar-palabra"><span class="header-section-number">20.2</span> Reliability of fixed-length ROAR-Palabra</h2>
+<section id="reliability-of-fixed-length-roar-palabra" class="level2" data-number="20.3">
+<h2 data-number="20.3" class="anchored" data-anchor-id="reliability-of-fixed-length-roar-palabra"><span class="header-section-number">20.3</span> Reliability of fixed-length ROAR-Palabra</h2>
 <p>ROAR-Palabra runs as fixed-length test and scores are computed based on a Rasch model. The current version of ROAR-Palabra takes about 5 minutes (70 items). In the near future, a computer-adaptive version will become available leveraging the full item bank. Then, more items can be administered for a more precise measure or fewer items can be administered as a quick screener. <a href="#tbl-palabra-grade-reliability" class="quarto-xref">Table&nbsp;<span>20.1</span></a> reports marginal reliability computed based on data from 5408 students under the IRT model for the standard, 70 item version of ROAR-Palabra. Reliability (<span class="math inline">\(\rho_{xx^\prime}\)</span>) is computed based on the estimated variance of <span class="math inline">\(\hat{\theta}\)</span> relative to the estimated standard error (<span class="math inline">\(\widehat{SE}(\hat{\theta})^2\)</span>) using <a href="#eq-empirical_rxx" class="quarto-xref">Equation&nbsp;<span>20.1</span></a>:</p>
 <p><span id="eq-empirical_rxx"><span class="math display">\[
 \hat{\rho}_{xx^\prime} = \frac{\widehat{VAR}(\hat{\theta})}{\widehat{VAR}(\hat{\theta}) + \widehat{SE}(\hat{\theta})^2},
@@ -897,6 +921,14 @@ Table&nbsp;20.8: Reliability of ROAR-Word by Race (California Sub-sample Only)
 </div>
 
 
+</section>
+<section id="bibliography" class="level1 unnumbered">
+<h1 class="unnumbered">References</h1>
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-bhat2024-pa" class="csl-entry" role="listitem">
+Bhat, Kruttika G., Alexa Mogan, Ana Saavedra, Mia Fuentes-Jimenez, Julian M. Siebert, Wanjing Anya Ma, Carrie Townley-Flores, et al. 2024. <span>“<a href="">Shared and Unique Influences of Phonological Processing on Reading and Math</a>.”</span>
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->
@@ -1481,4 +1513,4 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/YeatmanLab/ROAR-Technical-Manual/blob/main/reliability-palabra.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li><li><a href="https://github.com/YeatmanLab/ROAR-Technical-Manual/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/yeatmanlab/roar-technical-manual/blob/main/reliability-palabra.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li><li><a href="https://github.com/yeatmanlab/roar-technical-manual/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
