@@ -500,7 +500,7 @@ Figure&nbsp;5.1: ROAR-Word task.
 <p>ROAR-Word is a two alternative forced choice (2AFC) task and items are scored as correct or incorrect (dichotomous scoring) by comparing the participant’s response (keypress/touchscreen/swipe indicating real word vs.&nbsp;pseudo word), to the true classification (real/pseudo) of the item. Each response is scored in real time. The participant’s ability or <em>raw score</em> (<span class="math inline">\(\theta\)</span>) on ROAR-Word is computed based on an item response theory (IRT) model. IRT puts ability (<span class="math inline">\(\theta\)</span>) on an interval scale meaning that scores can be compared over time and across grades.</p>
 <p><strong>Types of Scores</strong></p>
 <ul>
-<li><strong>Raw Scores:</strong> ROAR-Word raw scores are computed based on an IRT model which puts ability (<span class="math inline">\(\theta\)</span>) on an interval scale. Raw scores are then put on a scale spanning 100-900 by applying a linear transform to <span class="math inline">\(\theta\)</span> estimates. <span class="math inline">\(\text{RAOR Score} = \text{round}\left( \left( \frac{\theta + 6}{3} \times 200 \right) + 100 \right)\)</span></li>
+<li><strong>Scaled Scores:</strong> ROAR-Word Scaled Scores are computed based on an IRT model which puts ability (<span class="math inline">\(\theta\)</span>) on an interval scale. Scaled Scores are then put on a scale spanning 100-900 by applying a linear transform to <span class="math inline">\(\theta\)</span> estimates. <span class="math inline">\(\text{RAOR Score} = \text{round}\left( \left( \frac{\theta + 6}{3} \times 200 \right) + 100 \right)\)</span></li>
 <li><strong>Percentile Scores:</strong> Percentile scores are computed in 2 ways (see <a href="intro-norms.html" class="quarto-xref"><span>Chapter 3</span></a>):
 <ol type="1">
 <li>Based on ROAR Norms</li>
@@ -1159,7 +1159,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   </div>
 </nav>
 </div> <!-- /content -->
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/yeatmanlab/roar-technical-manual/blob/main/intro-swr.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li><li><a href="https://github.com/yeatmanlab/roar-technical-manual/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer><script>var lightboxQuarto = GLightbox({"openEffect":"zoom","closeEffect":"zoom","descPosition":"bottom","selector":".lightbox","loop":false});
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/yeatmanlab/roar-technical-manual/blob/main/intro-swr.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li><li><a href="https://github.com/yeatmanlab/roar-technical-manual/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer><script>var lightboxQuarto = GLightbox({"openEffect":"zoom","descPosition":"bottom","selector":".lightbox","loop":false,"closeEffect":"zoom"});
 (function() {
   let previousOnload = window.onload;
   window.onload = () => {
