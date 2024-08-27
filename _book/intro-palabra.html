@@ -90,6 +90,8 @@ div.csl-indent {
     "search-label": "Search"
   }
 }</script>
+<script src="site_libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="site_libs/lightable-0.0.1/lightable.css" rel="stylesheet">
 
 
 </head>
@@ -228,19 +230,19 @@ div.csl-indent {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./intro-frase.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Eficiencia de lectura de frases (ROAR-Frase)</span></span></a>
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Spanish Sentence-Reading Efficiency: <em>Eficiencia de lectura de frases</em> (ROAR-Frase)</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./intro-fonema.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Conciencia fonológica (ROAR-Fonema)</span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Spanish Phonolocial Awareness: <em>Conciencia fonológica</em> (ROAR-Fonema)</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./intro-letra.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Conocimiento de Sonidos de Letras (ROAR-Letra)</span></span></a>
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Spanish Letter Sound Knowledge: <em>Conocimiento de Sonidos de Letras</em> (ROAR-Letra)</span></span></a>
   </div>
 </li>
       </ul>
@@ -449,21 +451,90 @@ div.csl-indent {
 </header>
 
 
-<p>ROAR-Palabra uses a lexical decision task to measure single word reading ability in Spanish. To our knowledge, the use of lexical decision tasks as a proxy of single word reading ability in Spanish has not been investigated before and we are the first to propose such task for the purpose of a reading screener. We developed this task in response to the need for reading screening instruments in languages other than English (also see <a href="intro-multilingualism.html" class="quarto-xref"><span>Chapter 10</span></a>). While additional languages are to follow, we began developing version of our subtests in Spanish, because it is the most widely spoken language other than English in the United States (and California specifically). ROAR-Palabra is still under active development and we report on the current fixed-length (62 items) version of the task (i.e., a non-computer-adaptive) version. For the rationale behind using lexical decision tasks to approximate word reading in general, refer to <a href="intro-swr.html" class="quarto-xref"><span>Chapter 5</span></a>. For a description of the structure of the task, see <a href="intro-swr.html#sec-swr-structure" class="quarto-xref"><span>Section 5.1</span></a>, particularly <a href="intro-swr.html#fig-ROAR-Word-Task" class="quarto-xref">Figure&nbsp;<span>5.1</span></a>.</p>
+<p>ROAR-Palabra uses a lexical decision task to measure single word reading ability in Spanish. To our knowledge, the use of lexical decision tasks as a proxy of single word reading ability in Spanish has not been investigated before and we are the first to propose such a task for the purpose of a reading screener. We developed this task in response to the need for reading screening instruments in languages other than English (also see <a href="intro-multilingualism.html" class="quarto-xref"><span>Chapter 10</span></a>). While additional languages are to follow, we began developing versions of our subtests in Spanish, because it is the most widely spoken language other than English in the United States (and California specifically). ROAR-Palabra is still under active development and we report on the current fixed-length (62 items) version of the task (i.e., a non-computer-adaptive) version. For the rationale behind using lexical decision tasks to approximate word reading in general, refer to <a href="intro-swr.html" class="quarto-xref"><span>Chapter 5</span></a>. For a description of the structure of the task, see <a href="intro-swr.html#sec-swr-structure" class="quarto-xref"><span>Section 5.1</span></a>, particularly <a href="intro-swr.html#fig-ROAR-Word-Task" class="quarto-xref">Figure&nbsp;<span>5.1</span></a>.</p>
 <p>Unlike English, Spanish is a highly phonologically transparent language, meaning that there is a close correspondence between spelling and pronunciation. This transparency requires careful selection of non-words, as they must adhere to Spanish phonotactic rules to avoid creating stimuli that are easily identifiable as non-words based solely on their orthographic structure. Additionally, Spanish morphology is more complex than English, with a rich system of verb conjugations and gendered noun-adjective agreements. Therefore, attention must be given to the morphological structure of the stimuli to ensure that the task captures genuine lexical decision processes rather than responses driven by morphological cues.</p>
 <section id="task-development" class="level2" data-number="11.1">
 <h2 data-number="11.1" class="anchored" data-anchor-id="task-development"><span class="header-section-number">11.1</span> Task Development</h2>
 <!-- In lieu of preprint, can be shortened once preprint becomes available -->
-<p>ROAR-Palabra is explicitly not a translation of the ROAR-Word— simple translations usually fail to produce equivalent versions of a test <span class="citation" data-cites="Solano-Flores.2009">(<a href="references.html#ref-Solano-Flores.2009" role="doc-biblioref">Solano-Flores, Backhoff, and Contreras-Niño 2009</a>)</span>. In contrast to many other non-English measures, we started the development process from a Spanish perspective: We created an initial list of stimuli by prompting ChatGPT to produce a list of frequent Spanish words, known to pre- and middle-schoolers across the Americas and occurring in all the varieties of Spanish spoken there. We then then used the Wuggy algorithm <span class="citation" data-cites="Keuleers.2010">(<a href="references.html#ref-Keuleers.2010" role="doc-biblioref">Keuleers and Brysbaert 2010</a>)</span> to create matching, word-like pseudowords—stimuli conforming to Spanish orthographic rules and matching the real word list in terms of word length, letter-transition frequencies, and orthographic neighbourhood size. Candidate items were then inspected by experts in reading development who speak various regional varieties of Spanish. The goal was to create an assessment that would be equitable across the wide variety of Spanish language varieties that are spoken in the United States. Spanish speakers from Chile, Colombia, Mexico, and Spain independently reviewed both the real and pseudowords. Items flagged as problematic due to, for example, low frequency of occurrence or inappropriate slang meanings in any one of the Spanishes were removed.</p>
+<p>ROAR-Palabra is explicitly not a translation of the ROAR-Word— simple translations usually fail to produce equivalent versions of a test <span class="citation" data-cites="Solano-Flores.2009">(<a href="references.html#ref-Solano-Flores.2009" role="doc-biblioref">Solano-Flores, Backhoff, and Contreras-Niño 2009</a>)</span>. In contrast to many other non-English measures, we started the development process from a Spanish perspective: We created an initial list of stimuli by prompting ChatGPT to produce a list of frequent Spanish words, known to pre- and middle-schoolers across the Americas and occurring in all the varieties of Spanish spoken there. We then then used the Wuggy algorithm <span class="citation" data-cites="Keuleers.2010">(<a href="references.html#ref-Keuleers.2010" role="doc-biblioref">Keuleers and Brysbaert 2010</a>)</span> to create matching, word-like pseudowords—stimuli conforming to Spanish orthographic rules and matching the real word list in terms of word length, letter-transition frequencies, and orthographic neighborhood size. Candidate items were then inspected by experts in reading development who speak various regional varieties of Spanish. The goal was to create an assessment that would be equitable across the wide variety of Spanish language varieties that are spoken in the United States. Spanish speakers from Colombia, Ecuador, Mexico, and Spain independently reviewed both the real and pseudowords. Items flagged as problematic due to, for example, low frequency of occurrence or inappropriate slang meanings in any one of the varieties of Spanish were removed.</p>
 <p>This process resulted in an initial item bank with 378 item pairs (that is 189 real words and 189 matched pseudowords). To keep administration time reasonable, we randomly selected 70 core items (35 real and 35 pseudowords), which form the basis of the current version. Every test-taker responded to these core items, as well as 30 additional items (15 real and 15 pseudowords) randomly selected from the broader item pool. In future versions, these additional items will be calibrated, too, so that the task can be made computer-adaptive.</p>
 <section id="californian-calibration-sub-sample" class="level3" data-number="11.1.1">
 <h3 data-number="11.1.1" class="anchored" data-anchor-id="californian-calibration-sub-sample"><span class="header-section-number">11.1.1</span> Californian Calibration Sub-sample</h3>
-<p>To account for regional variations in the Spanish language, as well as for the different linguistic profiles of monolingual and multilingual speakers of Spanish (see <a href="intro-multilingualism.html" class="quarto-xref"><span>Chapter 10</span></a>), we developed the ROAR-Palabra using data from both a native Spanish-speaking sample in Chile, as well as a multilingual sample from a school district in California. This allowed us to ensure that the task is appropriate for use in Spanish-speaking populations with different linguistic and cultural backgrounds. <a href="#tbl-palabra-sample" class="quarto-xref">Table&nbsp;<span>11.1</span></a> shows the demographic characteristics of our California sub-sample.</p>
+<p>To account for regional variations in the Spanish language, as well as for the different linguistic profiles of monolingual and multilingual speakers of Spanish (see <a href="intro-multilingualism.html" class="quarto-xref"><span>Chapter 10</span></a>), we developed the ROAR-Palabra using data from 6,034 K-11th grade students from a native Spanish-speaking sample in Colombia, as well as 426 K-2 students from a a multilingual sample from a school district in California. This allowed us to ensure that the task is appropriate for use in Spanish-speaking populations with different linguistic and cultural backgrounds. <a href="#tbl-palabra-sample-co" class="quarto-xref">Table&nbsp;<span>11.1</span></a> shows the grade-level distribution of the Colombian sub-sample. <a href="#tbl-palabra-sample" class="quarto-xref">Table&nbsp;<span>11.2</span></a> shows the demographic characteristics of the California sub-sample.</p>
+<div class="cell">
+<div id="tbl-palabra-sample-co" class="cell quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-palabra-sample-co-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;11.1: ROAR-Palabra Calibration Sub-sample from Colombia
+</figcaption>
+<div aria-describedby="tbl-palabra-sample-co-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<table class="table table-striped table-hover do-not-create-environment cell caption-top table-sm small" data-quarto-postprocess="true">
+<thead>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">Grade</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">N</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">1</td>
+<td style="text-align: right;">521</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2</td>
+<td style="text-align: right;">596</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">3</td>
+<td style="text-align: right;">566</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">4</td>
+<td style="text-align: right;">543</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">5</td>
+<td style="text-align: right;">589</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">6</td>
+<td style="text-align: right;">609</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">7</td>
+<td style="text-align: right;">519</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">8</td>
+<td style="text-align: right;">425</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">9</td>
+<td style="text-align: right;">416</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">10</td>
+<td style="text-align: right;">425</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">11</td>
+<td style="text-align: right;">399</td>
+</tr>
+</tbody>
+</table>
+
+
+</div>
+</div>
+</figure>
+</div>
+</div>
 <div class="cell">
 <div id="tbl-palabra-sample" class="cell quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-palabra-sample-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;11.1: ROAR-Palabra Calibration Sub-sample from California
+Table&nbsp;11.2: ROAR-Palabra Calibration Sub-sample from California
 </figcaption>
 <div aria-describedby="tbl-palabra-sample-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
@@ -637,7 +708,7 @@ Table&nbsp;11.1: ROAR-Palabra Calibration Sub-sample from California
 </section>
 <section id="response-time" class="level3" data-number="11.1.2">
 <h3 data-number="11.1.2" class="anchored" data-anchor-id="response-time"><span class="header-section-number">11.1.2</span> Response Time</h3>
-<p><a href="#fig-palabra-rt" class="quarto-xref">Figure&nbsp;<span>11.1</span></a> shows the distribution of students’ median response times on the ROARA-Palabra. Following the rationale outlined in <a href="reliability-swr.html" class="quarto-xref"><span>Chapter 15</span></a>), participants with a median response time &lt;450ms were excluded from further analyses. This results in 374 of 6035 students (6.2 %) being excluded from further analyses due to guessing or other unreliable testing behaviours.</p>
+<p><a href="#fig-palabra-rt" class="quarto-xref">Figure&nbsp;<span>11.1</span></a> shows the distribution of students’ median response times on the ROAR-Palabra. Following the rationale outlined in <a href="reliability-swr.html" class="quarto-xref"><span>Chapter 15</span></a>), participants with a median response time &lt;450ms were excluded from further analyses. This results in 374 of 6035 students (6.2 %) being excluded from further analyses due to guessing or other unreliable testing behaviors.</p>
 <div class="cell">
 <div class="cell-output-display">
 <div id="fig-palabra-rt" class="quarto-float quarto-figure quarto-figure-center anchored">
@@ -655,7 +726,7 @@ Figure&nbsp;11.1: Distribution of median response times (both locations) with in
 </section>
 <section id="item-properties" class="level3" data-number="11.1.3">
 <h3 data-number="11.1.3" class="anchored" data-anchor-id="item-properties"><span class="header-section-number">11.1.3</span> Item Properties</h3>
-<p>Overall, items tended to be easier for students in Colombia; this is expected, as these students are native Spanish speakers instructed in their first language, while the Californian sub-sample is more linguistically diverse in terms of the Spanish abilities and their instructional programmes. Also, the Colombian sub-sample drawn on here consists of students from grades 1-11. While this disallows for a meaningful direct comparison between Californian and Colombian students,</p>
+<p>Overall, items tended to be easier for students in Colombia; this is expected, as these students are native Spanish speakers instructed in their first language, while the Californian sub-sample is more linguistically diverse in terms of the Spanish abilities and their instructional programs. Also, the Colombian sub-sample drawn on here consists of students from grades 1-11. While this disallows for a meaningful direct comparison of ROAR-Palabra scores between Californian and Colombian students, ROAR-Palabra can, nonetheless, function as a useful task to tell apart higher from lower performing students within any of these populations.</p>
 <div class="cell">
 <div class="cell-output-display">
 <div id="fig-item-properties" class="quarto-float quarto-figure quarto-figure-center anchored">
@@ -1272,8 +1343,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./intro-frase.html" class="pagination-link" aria-label="Eficiencia de lectura de frases (ROAR-Frase)">
-        <span class="nav-page-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Eficiencia de lectura de frases (ROAR-Frase)</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./intro-frase.html" class="pagination-link" aria-label="Spanish Sentence-Reading Efficiency: _Eficiencia de lectura de frases_ (ROAR-Frase)">
+        <span class="nav-page-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Spanish Sentence-Reading Efficiency: <em>Eficiencia de lectura de frases</em> (ROAR-Frase)</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
